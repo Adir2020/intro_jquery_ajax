@@ -9,12 +9,15 @@ function consultaCep(){
             console.log(response);
 
             // usando o jquery para fazer a requisição
-
-            $("#localidade").html(response.localidade);
+           $("#localidade").html(response.localidade);
+           $("#ibge").html(response.ibge);
+           $("#ddd").html(response.ddd);
+           $("#uf").html(response.uf);
+            $("#titulo_cep").html("CEP " + response.cep);
 
             // outra forma de requisição
             //document.getElementById("localidade").innerHTML = response.localidade;
-            document.getElementById("ibge").innerHTML = response.ibge;
+            //document.getElementById("ibge").innerHTML = response.ibge;
         }
     })
 }
